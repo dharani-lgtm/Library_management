@@ -21,3 +21,15 @@ def add_book(title, author):
 add_book("Python Programming", "Guido van Rossum")
 add_book("Clean Code", "Robert Martin")
 display_books()
+
+def search_book(title):
+    for book in books:
+        if book["title"].lower() == title.lower():
+            print(f"Book found: {book['title']} by {book['author']}")
+            return
+    print(f"Book not found: {title}")
+
+# Test
+add_book("Python Programming", "Guido van Rossum")
+search_book("Python Programming")
+search_book("Java Programming")
