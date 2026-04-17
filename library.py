@@ -22,4 +22,13 @@ def remove_book(title):
 # Test
 add_book("Python Programming", "Guido van Rossum")
 remove_book("Python Programming")
+
+def add_book(title, author):
+    book = {"title": title, "author": author}
+    books.append(book)
+    print(f"Book added: {title} by {author}")
+
+# Test
+add_book("Python Programming", "Guido van Rossum")
+add_book("Clean Code", "Robert Martin")
 display_books()
